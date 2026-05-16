@@ -7,6 +7,6 @@ pillow
 scikit-learn
 matplotlib
 seaborn
-opencv-python
+opencv-python-headless
 firebase-admin
 pyrebase4
