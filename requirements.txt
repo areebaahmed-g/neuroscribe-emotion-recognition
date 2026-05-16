@@ -6,3 +6,4 @@ pandas
 opencv-python
 pillow
 scikit-learn
+matplotlib
