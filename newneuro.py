@@ -32,6 +32,10 @@ import firebase_admin
 from firebase_admin import credentials, firestore, auth as fb_auth
 import pyrebase
 
+face_cascade = cv2.CascadeClassifier(
+    os.path.join(os.path.dirname(__file__), "haarcascade_frontalface_default.xml")
+)
+
 # ══════════════════════════════════════════════════════════════════
 #  FIREBASE CONFIGURATION
 # ══════════════════════════════════════════════════════════════════
@@ -440,7 +444,7 @@ def process_face_for_inference(face_roi_rgb, mean=0.5, std=0.5):
     
     return tensor.unsqueeze(0)
 
-def extract_faces_from_image(image_rgb, cascade_path=cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'):
+def extract_faces_from_image(image_rgb, cascade_path="haarcascade_frontalface_default.xml"):
     """
     Extract the largest face from an RGB image
     Returns: cropped face ROI or None if no face found
