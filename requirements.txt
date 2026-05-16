@@ -1,7 +1,8 @@
 streamlit
+torch
+torchvision
 numpy
 pandas
 opencv-python
 pillow
-torch
-torchvision
+scikit-learn
