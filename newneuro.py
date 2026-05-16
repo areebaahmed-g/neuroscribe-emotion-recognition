@@ -1012,7 +1012,7 @@ dataset.zip
                         img_with_box = img_np.copy()
                         # Re-detect for visualization
                         gray = cv2.cvtColor(img_np, cv2.COLOR_RGB2GRAY)
-                        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+                        face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
                         faces = face_cascade.detectMultiScale(gray, scaleFactor=FACE_SCALE, minNeighbors=FACE_NEIGHBORS,
                                                               minSize=(FACE_MIN_SIZE, FACE_MIN_SIZE))
                         if len(faces) > 0:
